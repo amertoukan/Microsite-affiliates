@@ -1,0 +1,38 @@
+<sqb-conditional-section condition="'Pending' in user.segments" slot>
+    <sqm-portal-container direction="column" padding="xxx-large" gap="xxx-large" display="grid" max-width="100%">
+    <sqm-text><h1>Activity</h1></sqm-text>
+    <sqm-text><h2>Your account has not been reviewed yet. Please wait until you are approved before being able to refer friends and family!</h2></sqm-text>
+    </sqm-portal-container>
+</sqb-conditional-section>
+
+
+<sqb-conditional-section condition="'Rejected' in user.segments" slot>
+  <sqm-portal-container direction="column" padding="xxx-large" gap="xxx-large" display="grid" max-width="100%">
+    <sqm-text><h1>Activity</h1></sqm-text>
+    <sqm-text><h2>Your account has been rejected. Please contact support for further details.</h2></sqm-text>
+    
+</sqm-portal-container></sqb-conditional-section>
+
+
+<sqb-conditional-section condition="'Approved' in user.segments" slot>
+   <sqm-portal-container direction="column" padding="xxx-large" gap="xxx-large" display="grid" max-width="100%">
+<sqm-stat-container direction="column" space="xxx-large" padding="xxx-large" gap="xx-large" display="grid">
+   <sqm-text><h1>Activity</h1></sqm-text>
+ <sqm-big-stat flex-reverse="true" alignment="left" stat-type="/referralsCount" program-id="demo-referral-program"><sqm-text><p>Referrals</p></sqm-text></sqm-big-stat>
+ <sqm-big-stat flex-reverse="true" alignment="left" stat-type="/rewardsCountFiltered/AVAILABLE" program-id="demo-referral-program"><sqm-text><p>Rewards Earned</p></sqm-text></sqm-big-stat>
+ <sqm-big-stat alignment="left" stat-type="/rewardBalance/CREDIT/POINT" program-id="demo-referral-program" flex-reverse><sqm-text><p>Reward Balance</p></sqm-text></sqm-big-stat>
+</sqm-stat-container>
+
+<sqm-referral-table hidden-columns="0" md-breakpoint="799" more-label="Next" per-page="4" prev-label="Prev" sm-breakpoint="599">
+ <sqm-referral-table-user-column anonymous-user="Anonymous User" column-title="Customer" deleted-user="Deleted User"></sqm-referral-table-user-column>
+ <sqm-referral-table-rewards-column column-title="Rewards" expiring-text="Expiring in" fuel-tank-text="Your code is" pending-for-text="{status} for {date}" reward-received-text="Reward received on" status-long-text="{status, select, AVAILABLE {Reward expiring on} CANCELLED {Reward cancelled on} PENDING {Available on} EXPIRED {Reward expired on} other {Not available} }" status-text="{status, select, AVAILABLE {Available} CANCELLED {Cancelled} PENDING {Pending} EXPIRED {Expired} REDEEMED {Redeemed} other {Not available} }"></sqm-referral-table-rewards-column>
+ <sqm-referral-table-status-column column-title="Status" converted-status-text="Converted" in-progress-status-text="In Progress"></sqm-referral-table-status-column>
+ <sqm-referral-table-date-column column-title="Referred " date-shown="dateReferralStarted"></sqm-referral-table-date-column>
+ <sqm-empty slot="empty" empty-state-image="https://res.cloudinary.com/saasquatch/image/upload/v1644000223/squatch-assets/empty_referral2.png" empty-state-header="View your referral details" empty-state-text="Refer a friend to view the status of your referrals and rewards earned">
+ </sqm-empty>
+
+</sqm-referral-table>
+   
+ </sqm-portal-container>
+
+ </sqb-conditional-section>
