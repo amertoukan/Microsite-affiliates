@@ -1,0 +1,38 @@
+<sqb-conditional-section condition="'Pending' in user.segments" slot>
+    <sqm-portal-container direction="column" padding="xxx-large" gap="xxx-large" display="grid" max-width="100%">
+    <sqm-text><h1>Dashboard</h1></sqm-text>
+    <sqm-text><h2>Your account has not been reviewed yet. Please wait until you are approved before being able to refer friends and family!</h2></sqm-text>
+    </sqm-portal-container>
+</sqb-conditional-section>
+<sqb-conditional-section condition="'Rejected' in user.segments" slot>
+  <sqm-portal-container direction="column" padding="xxx-large" gap="xxx-large" display="grid" max-width="100%">
+    <sqm-text><h1>Dashbpard</h1></sqm-text>
+    <sqm-text><h2>Your account has been rejected. Please contact support for further details.</h2></sqm-text>
+    
+</sqm-portal-container></sqb-conditional-section>
+<sqb-conditional-section condition="'Approved' in user.segments" slot>
+
+
+ <sqm-portal-container direction="column" padding="xxx-large" gap="xxx-large" display="grid" max-width="100%"><sqm-titled-section label-margin="xx-small" padding="none" text-align="left"><sqm-text slot="label"> <p>Welcome back,</p> </sqm-text><sqm-text slot="content">
+   <h1>
+     <sqm-user-name fallback="Anonymous User" loading-text="..."></sqm-user-name>
+   </h1> </sqm-text></sqm-titled-section>
+<sqm-stat-container space="xxxx-large" display="grid"><sqm-big-stat flex-reverse="true" alignment="left" stat-type="/referralsCount"><p>Referrals</p></sqm-big-stat>
+ <sqm-big-stat flex-reverse="true" alignment="left" stat-type="/rewardsCountFiltered/AVAILABLE"><p>Rewards Earned</p></sqm-big-stat>
+ <sqm-big-stat flex-reverse="true" alignment="left" stat-type="/rewardBalance/CREDIT/POINT"><p>Reward Balance</p></sqm-big-stat>
+</sqm-stat-container> </sqm-portal-container><sqm-portal-container direction="column" padding="xxx-large" gap="xxx-large" display="grid" max-width="100%">
+<sqm-titled-section padding="none" label-margin="x-large" text-align="left"><sqm-text slot="label"> <h2>Partner and Profit</h2> </sqm-text><sqm-text slot="content">
+   <p>
+       Get rewarded for referring potential customers. Earn
+       commission for each successful lead you send our way
+   </p>
+ </sqm-text></sqm-titled-section>
+<sqm-titled-section label-margin="small" padding="none" text-align="left"><sqm-text slot="label"> <h3>Share your referral link</h3> </sqm-text><sqm-share-link slot="content" tooltip-lifespan="1000" tooltip-text="Copied to Clipboard" program-id="salesforce-demo-program"></sqm-share-link></sqm-titled-section>
+<sqm-titled-section label-margin="small" padding="none" text-align="left">
+ <sqm-text slot="label"> <h3>Share your referral code</h3> </sqm-text><sqm-share-code id="share-code" slot="content" tooltip-lifespan="1000" tooltip-text="Copied to Clipboard" program-id="salesforce-demo-program"></sqm-share-code>
+</sqm-titled-section>
+<sqm-titled-section label-margin="small" padding="none" text-align="left"><sqm-text slot="label"> <h3>Share via social media</h3> </sqm-text><sqm-portal-container slot="content" direction="row" padding="none" gap="xxx-large" min-width="160px" display="grid" max-width="100%"><sqm-share-button icon="envelope" medium="email" size="medium" pill="true" iconslot="prefix" type="default">Email a friend</sqm-share-button><sqm-share-button medium="twitter" size="medium" pill="true" type="default" iconslot="prefix">Tweet about us</sqm-share-button><sqm-share-button medium="facebook" size="medium" pill="true" type="default" iconslot="prefix">Share on Facebook</sqm-share-button></sqm-portal-container></sqm-titled-section></sqm-portal-container>
+
+ 
+
+</sqb-conditional-section>
