@@ -1,0 +1,16 @@
+<sqm-divided-layout direction="row" style="border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea">
+    <sqm-navigation-sidebar>
+        <sqm-navigation-sidebar-item path="/" icon="house" label="Dashboard"></sqm-navigation-sidebar-item>
+      <sqb-conditional-section condition="'Approved' in user.segments" slot>
+         
+          <sqm-navigation-sidebar-item path="/activity" icon="bar-chart" label="Activity"></sqm-navigation-sidebar-item>
+          <sqm-navigation-sidebar-item label="Refer a Lead" icon="file-earmark-text" slot path="/refer-a-lead"></sqm-navigation-sidebar-item>
+      </sqb-conditional-section><sqm-navigation-sidebar-item label="Assets" icon="arrow-down-square" slot path="/assets"></sqm-navigation-sidebar-item>
+       
+      <sqm-navigation-sidebar-item path="/editProfile" icon="person" label="Edit Profile"></sqm-navigation-sidebar-item>
+      <sqm-navigation-sidebar-item path="/logout" icon="box-arrow-right" label="Logout"></sqm-navigation-sidebar-item>
+    </sqm-navigation-sidebar>
+    <sqm-divided-layout direction="column" style="border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea">
+      <slot></slot>
+    </sqm-divided-layout>
+  </sqm-divided-layout>
