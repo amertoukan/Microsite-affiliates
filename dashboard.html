@@ -1,38 +1,62 @@
 <sqb-conditional-section condition="'Pending' in user.segments" slot>
-    <sqm-portal-container direction="column" padding="xxx-large" gap="xxx-large" display="grid" max-width="100%">
-    <sqm-text><h1>Dashboard</h1></sqm-text>
-    <sqm-text><h2>Your account has not been reviewed yet. Please wait until you are approved before being able to refer friends and family!</h2></sqm-text>
+  <sqm-portal-container direction="column" padding="none" gap="xx-large" display="grid" max-width="100%" center>
+    <sqm-hero background="https://i.imgur.com/5s2SYAs.png" columns="1" padding-size="large" wrap-direction="wrap" slot secondary-background="#E1E5F2">
+    <sqm-portal-container direction="column" padding="none" gap="xxx-large" display="grid" max-width="1100px" slot center justify-content="center">
+    <sqm-hero background="#FCFCFF" columns="2" padding-size="none" wrap-direction="wrap" secondary-background="transparent">
+        <sqm-portal-container direction="column" padding="x-large" gap="x-small" display="grid" max-width="100%" slot>
+        <sqm-portal-container direction="row" padding="none" gap="x-small" display="flex" max-width="100%" slot><h1>Welcome back,</h1><h1>
+        <sqm-user-name fallback="Anonymous User" loading-text="..."></sqm-user-name>
+        </h1>
+    </sqm-portal-container></sqm-portal-container></sqm-hero>
+    </sqm-portal-container></sqm-hero>
     </sqm-portal-container>
+    
+
+      <sqm-portal-container direction="column" padding="xxx-large" gap="xxx-large" display="grid" max-width="100%">
+
+    <sqm-text><h2>Your account is not approved yet. Please contact support for further details.</h2></sqm-text>
+    
+</sqm-portal-container>
+
 </sqb-conditional-section>
 <sqb-conditional-section condition="'Rejected' in user.segments" slot>
+    <sqm-portal-container direction="column" padding="none" gap="xx-large" display="grid" max-width="100%" center>
+    <sqm-hero background="https://i.imgur.com/5s2SYAs.png" columns="1" padding-size="large" wrap-direction="wrap" slot secondary-background="#E1E5F2">
+    <sqm-portal-container direction="column" padding="none" gap="xxx-large" display="grid" max-width="1100px" slot center justify-content="center">
+    <sqm-hero background="#FCFCFF" columns="2" padding-size="none" wrap-direction="wrap" secondary-background="transparent">
+        <sqm-portal-container direction="column" padding="x-large" gap="x-small" display="grid" max-width="100%" slot>
+        <sqm-portal-container direction="row" padding="none" gap="x-small" display="flex" max-width="100%" slot><h1>Welcome back,</h1><h1>
+        <sqm-user-name fallback="Anonymous User" loading-text="..."></sqm-user-name>
+        </h1>
+    </sqm-portal-container></sqm-portal-container></sqm-hero>
+    </sqm-portal-container></sqm-hero>
+    </sqm-portal-container>
+
   <sqm-portal-container direction="column" padding="xxx-large" gap="xxx-large" display="grid" max-width="100%">
-    <sqm-text><h1>Dashbpard</h1></sqm-text>
+
     <sqm-text><h2>Your account has been rejected. Please contact support for further details.</h2></sqm-text>
     
-</sqm-portal-container></sqb-conditional-section>
+</sqm-portal-container>
+
+</sqb-conditional-section>
 <sqb-conditional-section condition="'Approved' in user.segments" slot>
+<sqm-portal-container direction="column" padding="none" gap="xx-large" display="grid" max-width="100%" center><sqm-hero background="https://i.imgur.com/5s2SYAs.png" columns="1" padding-size="large" wrap-direction="wrap" slot secondary-background="#E1E5F2"><sqm-portal-container direction="column" padding="none" gap="xxx-large" display="grid" max-width="1100px" slot center justify-content="center">
+    <sqm-hero background="#FCFCFF" columns="2" padding-size="none" wrap-direction="wrap" secondary-background="transparent">
+        <sqm-portal-container direction="column" padding="x-large" gap="x-small" display="grid" max-width="100%" slot>
+            <sqm-portal-container direction="row" padding="none" gap="x-small" display="flex" max-width="100%" slot><h1>Welcome back,</h1><h1>
+                    <sqm-user-name fallback="Anonymous User" loading-text="..."></sqm-user-name>
+                    </h1></sqm-portal-container>
 
+                <sqm-stat-container space="medium" display="grid"><sqm-big-stat flex-reverse="true" stat-type="/referralsCount" program-id="klip-partner-program" alignment="left"><p>Total referrals</p></sqm-big-stat>
+                    <sqm-big-stat stat-type="/rewardsCountFiltered/AVAILABLE" program-id="klip-partner-program" alignment="left" flex-reverse><p>Rewards Earned</p></sqm-big-stat>
+                    <sqm-big-stat flex-reverse="true" stat-type="/rewardBalance/CREDIT/PAYPAL%2FUSD" program-id="klip-partner-program" alignment="left"><p>Reward Balance</p></sqm-big-stat>
+                </sqm-stat-container>
+        </sqm-portal-container>
+        
+    </sqm-hero>
 
- <sqm-portal-container direction="column" padding="xxx-large" gap="xxx-large" display="grid" max-width="100%"><sqm-titled-section label-margin="xx-small" padding="none" text-align="left"><sqm-text slot="label"> <p>Welcome back,</p> </sqm-text><sqm-text slot="content">
-   <h1>
-     <sqm-user-name fallback="Anonymous User" loading-text="..."></sqm-user-name>
-   </h1> </sqm-text></sqm-titled-section>
-<sqm-stat-container space="xxxx-large" display="grid"><sqm-big-stat flex-reverse="true" alignment="left" stat-type="/referralsCount"><p>Referrals</p></sqm-big-stat>
- <sqm-big-stat flex-reverse="true" alignment="left" stat-type="/rewardsCountFiltered/AVAILABLE"><p>Rewards Earned</p></sqm-big-stat>
- <sqm-big-stat flex-reverse="true" alignment="left" stat-type="/rewardBalance/CREDIT/POINT"><p>Reward Balance</p></sqm-big-stat>
-</sqm-stat-container> </sqm-portal-container><sqm-portal-container direction="column" padding="xxx-large" gap="xxx-large" display="grid" max-width="100%">
-<sqm-titled-section padding="none" label-margin="x-large" text-align="left"><sqm-text slot="label"> <h2>Partner and Profit</h2> </sqm-text><sqm-text slot="content">
-   <p>
-       Get rewarded for referring potential customers. Earn
-       commission for each successful lead you send our way
-   </p>
- </sqm-text></sqm-titled-section>
-<sqm-titled-section label-margin="small" padding="none" text-align="left"><sqm-text slot="label"> <h3>Share your referral link</h3> </sqm-text><sqm-share-link slot="content" tooltip-lifespan="1000" tooltip-text="Copied to Clipboard" program-id="salesforce-demo-program"></sqm-share-link></sqm-titled-section>
-<sqm-titled-section label-margin="small" padding="none" text-align="left">
- <sqm-text slot="label"> <h3>Share your referral code</h3> </sqm-text><sqm-share-code id="share-code" slot="content" tooltip-lifespan="1000" tooltip-text="Copied to Clipboard" program-id="salesforce-demo-program"></sqm-share-code>
-</sqm-titled-section>
-<sqm-titled-section label-margin="small" padding="none" text-align="left"><sqm-text slot="label"> <h3>Share via social media</h3> </sqm-text><sqm-portal-container slot="content" direction="row" padding="none" gap="xxx-large" min-width="160px" display="grid" max-width="100%"><sqm-share-button icon="envelope" medium="email" size="medium" pill="true" iconslot="prefix" type="default">Email a friend</sqm-share-button><sqm-share-button medium="twitter" size="medium" pill="true" type="default" iconslot="prefix">Tweet about us</sqm-share-button><sqm-share-button medium="facebook" size="medium" pill="true" type="default" iconslot="prefix">Share on Facebook</sqm-share-button></sqm-portal-container></sqm-titled-section></sqm-portal-container>
-
- 
-
+</sqm-portal-container></sqm-hero><sqm-portal-container direction="column" padding="medium" gap="xxx-large" display="grid" max-width="1000px" slot center><sqp-account-details schedule-header-text="Schedule" integration-alert-text="Looks like this feature is turned off at the moment. Come back later to see if it’s enabled. " integration-alert-header="PayPal payouts are currently disabled" details-header-text="Payout details" pay-pal-account-header-text="PayPal account" connect-pay-pal-description-text="Connect your PayPal account to automatically receive payments/cash rewards." connect-pay-pal-account-button-text="Connect account" w-9-tax-label="Awaiting W-9 tax form" upcoming-payment-label="Upcoming" recent-payment-label="Recent payment" other-currencies-label="other currencies" next-payout-label="Next payout" next-payment-label="Next payment" header-text="PayPal account" edit-text="Edit" account-label="Account" success-message="Success!" submit-pay-pal-account-button-text="Connect account" pay-pal-email-label-help-text="Enter the email used for your PayPal account." pay-pal-email-label="PayPal email" modal-connect-pay-pal-account-header="Connect PayPal account" disconnect-account-header-text="Disconnect account" disconnect-account-description-text="You will not be able to receive payments if you disconnect your PayPal account."></sqp-account-details><sqm-portal-container direction="row" padding="none" gap="x-small" display="grid" max-width="1100px" justify-content="center" center><sqm-portal-container direction="row" padding="none" gap="x-small" display="grid" max-width="100%" justify-content="center" center></sqm-portal-container><sqm-portal-container direction="row" padding="none" gap="none" display="grid" max-width="60px" slot min-width="60px" center><sqm-image image-url="https://res.cloudinary.com/saasquatch-staging/image/upload/v1669225530/tenant_test_a74miwdpofztj/cthozzdb8aknsdjqc30z.svg" alignment="center" max-width="40px"></sqm-image></sqm-portal-container><sqm-titled-section text-align="center" label-margin="none" padding="none" slot><div slot="label"><h2>Partner with Klip and earn rewards</h2></div><div slot="content"><p>Tell your friends about Klip with your referral link, referral code, or spread the word on social media<span>&#x2014;</span>the choice is yours.</p></div></sqm-titled-section><sqm-referral-card vertical-alignment="center"> <sqm-portal-container gap="medium" slot="left" direction="column" display="grid" max-width="100%" padding="none"><sqm-titled-section label-margin="none" padding="none" text-align="left"><sqm-text slot="label">  </sqm-text><p slot="label">Your unique referral link</p><sqm-share-link slot="content" tooltip-lifespan="1000" tooltip-text="Copied to Clipboard" program-id="klip-partner-program"></sqm-share-link></sqm-titled-section><sqm-titled-section label-margin="small" padding="none" text-align="left">
+<sqm-text slot="label">  </sqm-text><p slot="label">Your unique referral code</p><sqm-share-code slot="content" tooltip-lifespan="1000" tooltip-text="Copied to Clipboard" program-id="klip-partner-program"></sqm-share-code>
+</sqm-titled-section>   </sqm-portal-container> <sqm-portal-container gap="xx-small" slot="right" direction="column" display="grid" max-width="100%" padding="none"><p>Share on social media</p><sqm-portal-container direction="column" padding="none" gap="large" min-width="160px" display="grid" max-width="100%"><sqm-share-button icon="envelope" medium="email" size="medium" iconslot="prefix" type="default" hidetext>Email a friend</sqm-share-button><sqm-share-button medium="twitter" size="medium" type="default" iconslot="prefix" hidetext>Tweet about us</sqm-share-button><sqm-share-button medium="facebook" size="medium" type="default" iconslot="prefix" hidetext>Share on Facebook</sqm-share-button></sqm-portal-container>    </sqm-portal-container> </sqm-referral-card></sqm-portal-container><sqm-portal-container direction="column" padding="none" gap="xxx-large" display="grid" max-width="100%" slot></sqm-portal-container><sqm-program-explainer header="Need a refesher on our partner program?"><sqm-program-explainer-step description="If they sign up for a Klip Business plan, you'll get $50 when they pay for their first month." header="Refer friends to Klip" icon="people" text-color="#222222ff"></sqm-program-explainer-step><sqm-program-explainer-step description="If they sign up for a Klip Enterprise plan, you'll get $200 when our team qualifies them as a good fit for Klip." header="Be a Klip advocate" icon="trophy" text-color="#222222ff"></sqm-program-explainer-step><sqm-program-explainer-step description="If they become a paying customer with a Klip Enterprise plan, you'll get $1000." header="Get rewarded" icon="coin" text-color="#222222ff"></sqm-program-explainer-step></sqm-program-explainer><sqm-portal-container direction="column" padding="none" gap="xxx-large" display="grid" max-width="100%"></sqm-portal-container></sqm-portal-container>
+ <sqm-portal-container direction="column" padding="none" gap="medium" display="grid" max-width="100%"><sqm-portal-container direction="column" padding="none" gap="none" display="grid" max-width="100%" slot></sqm-portal-container></sqm-portal-container></sqm-portal-container>
 </sqb-conditional-section>

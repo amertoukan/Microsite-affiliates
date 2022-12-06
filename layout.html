@@ -1,0 +1,15 @@
+<sqm-divided-layout direction="row" style="border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea">
+  <sqm-navigation-sidebar>
+    <sqm-navigation-sidebar-item path="/" icon="house" label="Dashboard"></sqm-navigation-sidebar-item>
+    <sqb-conditional-section condition="'Approved' in user.segments" slot>
+      <sqm-navigation-sidebar-item path="/activity" icon="bar-chart" label="Activity"></sqm-navigation-sidebar-item>
+      <sqm-navigation-sidebar-item path="/refer-a-lead" icon="chat-square-text" label="Refer a Lead"></sqm-navigation-sidebar-item>
+      <sqm-navigation-sidebar-item path="/assets" icon="arrow-bar-down" label="Assets"></sqm-navigation-sidebar-item>
+    </sqb-conditional-section>
+    <sqm-navigation-sidebar-item path="/editProfile" icon="person" label="Edit Profile"></sqm-navigation-sidebar-item>
+    <sqm-navigation-sidebar-item path="/logout" icon="box-arrow-right" label="Logout"></sqm-navigation-sidebar-item>
+  </sqm-navigation-sidebar>
+  <sqm-divided-layout direction="column" style="border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea">
+    
+  </sqm-divided-layout><sqm-portal-container direction="row" gap="none" display="flex" max-width="100%" slot center padding="none"><slot></slot></sqm-portal-container>
+  </sqm-divided-layout>
